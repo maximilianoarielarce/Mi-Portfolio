@@ -224,6 +224,21 @@ body::before {
 }
 
 @media (max-width: 480px) {
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 4px;
+    z-index: 10000;
+    pointer-events: none;
+    border-radius: 6px;
+    padding: 2px;
+    background: linear-gradient(135deg, #00d9ff 0%, #00bfff 48%, #8040ff 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    box-shadow: 0 0 8px rgba(0, 207, 255, 0.32), 0 0 8px rgba(128, 64, 255, 0.24);
+  }
+
   .section-inner { padding: 0 12px; }
   .section-label { letter-spacing: 2px !important; }
   .section-title { font-size: clamp(1.4rem, 6.8vw, 1.7rem) !important; }
